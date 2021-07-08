@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("img4.jpg");
+    backdrop-filter: saturate(180%) blur(10px);
+    background-color: grey;
+    background-blend-mode: normal;
+    background-size: 100%;
+    overflow-x: scroll;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 20em 20em;
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+    user-select: none;
+
+
+}
+
+    .container div {
+        border: 0.1em solid white;
+        overflow: hidden;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 12em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: saturate(180%) blur(10px);
+    }
+
+
+.box1 {
+    background-image: url("img1.jpg");
+
+}
+.box2 {
+    background-image: url("img2.jpg");
+}
+.box3 {
+    background-image: url("img3.jpg");
+  
+}
+.box4 {
+    background-image: url("img4.jpg");
+}
+
+h2{
+    margin-top: -10em;
+    color: red;
+    transition: 1s;
+
+}
+
+.container div:hover {
+    background-size: 110%;
+    transition: 1s;
+    background-color: red;
+    background-blend-mode: screen;
+    background-blend-mode: darken;
+}
+@media only screen and (max-width: 600px) {
+    body {
+        background-image: url("arts_practice.jpg");
+        background-color: red;
+        background-size: 100vh;
+        background-blend-mode: darken;
+        backdrop-filter: none;
+    }
+    .container{
+        grid-template-columns: 20em;
+    }
+}
+
